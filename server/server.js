@@ -44,6 +44,10 @@ io.on("connection",(socket)=>{
 app.use(express.json({limit:'4mb'}))
 app.use(cors())
 
+
+app.get('/', (req, res) => {
+    res.send('Welcome to the server!');
+})
 app.use("/api/status",(req,res)=>res.send("Srever is live !"))
 app.use("/api/auth",userRouter)
 app.use("/api/messages",messageRouter)
@@ -52,6 +56,6 @@ await connectDB()
 const PORT = process.env.PORT || 5000
 
 server.listen(PORT,()=>{
-   // console.log("Server is running on Port" + PORT)
+    console.log("Server is running on Port" + PORT)
 })
 

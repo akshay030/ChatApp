@@ -1,6 +1,8 @@
 # ChatApp
 
 A real-time chat application built with Node.js, Express, Socket.io, and MongoDB. Users can register, log in, and chat with each other in real time.
+![Screenshot 2025-06-08 130334](https://github.com/user-attachments/assets/82208126-3f06-4a6c-b97b-704f886fc970)
+
 
 ## Features
 

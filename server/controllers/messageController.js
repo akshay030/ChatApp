@@ -39,7 +39,7 @@ export const getMessages = async(req,res) => {
         {senderId: myId, receiverId: selectedUserId},
         {senderId: selectedUserId, receiverId: myId}
       ]
-    });
+    }).sort({createdAt: 1});
 
     await Message.updateMany(
       {senderId: selectedUserId, receiverId: myId},
